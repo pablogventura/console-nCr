@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+# coding=utf-8
+
+import sys
+from scipy.special import comb
+
+try:
+    n = int(sys.argv[1])
+    k = int(sys.argv[2])
+except:
+    print ("Calculate combination number nCr.\n"
+           "Usage: combinations n k")
+    sys.exit(1)
+
+c = comb(n, k, exact=True)
+print "\t%s = #{Subsets of %s, from set of %s}" % (c, k, n)
